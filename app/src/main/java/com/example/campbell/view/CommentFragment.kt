@@ -143,6 +143,7 @@ class CommentFragment : Fragment() {
                             favori = "5"
                         }
 
+
                         val postHashMap = hashMapOf<String, Any>()
                         postHashMap.put("nameSurname", nameSurname)
                         postHashMap.put("mailAdress", mailAdress)
