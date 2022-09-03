@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- eklenti renkler -->
+    <color name="blacks">#FFFFFFFF</color>
+    <color name="koyuSuyesili">#FAFAFA</color>
+    <color name="dahakoyuSuyesili">#FAFAFA</color>
+    <color name="koyuMavi">#ffffff</color>
+    <color name="ortaMavi">#164372</color>
+    <color name="acikYesil">#2bc48a</color>
+    <color name="golden">#FCA120</color>
+    <color name="goldenTrans">#80FCA120</color>
+    <color name= "maviTrans">#80164372</color>
+
+
+    <color name= "barlar">#E1E4F1</color>
+    <color name= "sehirItem">#F2F4FD</color>
+
+
+
+</resources>

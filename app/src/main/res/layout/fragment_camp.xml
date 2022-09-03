@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/barlar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/countryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/brawler"
+                android:text="Şehir Adı"
+                android:textColor="@color/ortaMavi"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ScrollView
+            android:id="@+id/scrrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="65dp"
+            android:layout_marginTop="75dp"
+            android:background="@color/koyuMavi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:background="@color/koyuMavi"
+                tools:context=".view.CampFragment">
+
+                <!--Image Layout'u-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="375dp"
+                    android:layout_height="375dp"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--Image View-->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/countryImage"
+                        android:layout_width="375dp"
+                        android:layout_height="375dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+
+                    <!--Image view üzerindeki harita buton layoutu-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout11"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/switcherbuttongoldentransparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+
+                        <!--Image view üzerindeki harita butonu-->
+                        <ImageView
+                            android:id="@+id/goingToMap"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/ic_lction"
+                            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout11"
+                            app:layout_constraintEnd_toEndOf="@+id/constraintLayout11"
+                            app:layout_constraintStart_toStartOf="@+id/constraintLayout11"
+                            app:layout_constraintTop_toTopOf="@+id/constraintLayout11"
+                            tools:ignore="SpeakableTextPresentCheck">
+
+                        </ImageView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--Image view üzerindeki yorum buton layoutu-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Açıklama Layout'u-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="375dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/koseyuvarlat"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+
+                    <!-- Açıklama Başlığı-->
+                    <TextView
+                        android:id="@+id/aciklamaninBasligi"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/brawler_new"
+                        android:gravity="center"
+                        android:text="Açıklama Ve Özellikler"
+                        android:textColor="@color/ortaMavi"
+                        android:textSize="22sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+
+                    <!-- Açıklama Text-->
+                    <TextView
+                        android:id="@+id/countryComment"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/brawler_new"
+                        android:gravity="center"
+                        android:textColor="#868687"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/aciklamaninBasligi" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Olanaklar Layout'u-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
+                    android:layout_width="375dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/koseyuvarlat"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+                    <!-- Olanaklar Başlığı-->
+                    <TextView
+                        android:id="@+id/olanaklarinBasligi"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/brawler_new"
+                        android:gravity="center"
+                        android:text="Olanakları"
+                        android:textColor="@color/ortaMavi"
+                        android:textSize="22sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                    </TextView>
+
+                    <!--Olanaklar Text-->
+                    <TextView
+                        android:id="@+id/countryOlanak"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/brawler_new"
+                        android:gravity="center"
+                        android:textColor="#868687"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/olanaklarinBasligi" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Ulasım Layout'u-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="375dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/koseyuvarlat"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+                    <!-- Ulaşım Başlığı-->
+                    <TextView
+                        android:id="@+id/UlasimBasligi"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/brawler_new"
+                        android:gravity="center"
+                        android:text="Ulaşım"
+                        android:textColor="@color/ortaMavi"
+                        android:textSize="22sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                    </TextView>
+
+                    <!-- Ulasım Text-->
+                    <TextView
+                        android:id="@+id/countryUlasim"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/brawler_new"
+                        android:gravity="center"
+                        android:textColor="#868687"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/UlasimBasligi" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <!-- Space Layout'u Bir İşe Yaramıyor-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:id="@+id/constraintLayout9"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+
+        <!--FOOTER -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/footer_cll"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/barlar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Footer için üst minik çizgi -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/ortaMavi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--FOOTER İÇ ALAN-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:background="@drawable/koseyuvarlat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--İTEM 1 ALANI-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout7"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/switcherbuttondarken"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout6"
+                    app:layout_constraintStart_toStartOf="@id/constraintLayout6"
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayout6">
+
+                    <!-- İTEM GÖRSEL -->
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_camping"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--İTEM 2 ALANI-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout10"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout7"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <!-- İTEM 2 GÖRSEL -->
+                    <ImageView
+                        android:id="@+id/goingToComment"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_cmmnt"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/feedFragment">
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.example.campbell.view.FeedFragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" >
+        <action
+            android:id="@+id/action_feedFragment_to_campFragment"
+            app:destination="@id/campFragment" />
+        <argument
+            android:name="campListData"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.example.campbell.model.Camp[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/campFragment"
+        android:name="com.example.campbell.view.CampFragment"
+        android:label="fragment_camp"
+        tools:layout="@layout/fragment_camp" >
+        <action
+            android:id="@+id/action_campFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_campFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <argument
+            android:name="campListData"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.example.campbell.model.Camp" />
+        <action
+            android:id="@+id/action_campFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+        <action
+            android:id="@+id/action_campFragment_to_pictureFragment"
+            app:destination="@id/pictureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.campbell.view.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_campFragment"
+            app:destination="@id/campFragment" />
+        <argument
+            android:name="campListData"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.example.campbell.model.Camp" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.example.campbell.view.CommentFragment"
+        android:label="CommentFragment" >
+        <argument
+            android:name="campListData"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.example.campbell.model.Camp" />
+        <action
+            android:id="@+id/action_commentFragment_to_campFragment"
+            app:destination="@id/campFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pictureFragment"
+        android:name="com.example.campbell.view.PictureFragment"
+        android:label="fragment_picture"
+        tools:layout="@layout/fragment_picture" >
+        <action
+            android:id="@+id/action_pictureFragment_to_campFragment"
+            app:destination="@id/campFragment" />
+        <argument
+            android:name="campListData"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.example.campbell.model.Camp" />
+    </fragment>
+</navigation>

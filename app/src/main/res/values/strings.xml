@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Campbell</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mail">User E-Mail</string>
+    <string name="password">User Password</string>
+    <string name="hesapSorgu">Kayıtlı Bir Hesabın Yok Mu?</string>
+    <string name="hesapSorguVar">Kayıtlı Bir Hesabın Var Mı?</string>
+    <string name="kayitOl">Kayıt Ol</string>
+    <string name="giris">Giris Yap</string>
+</resources>
