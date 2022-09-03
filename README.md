@@ -4,6 +4,8 @@
 
 <h2 align="center"> Libraries and Tools :hammer:</h2>
 
+<h3 align="center"> 
+  
 - ☕ **Coroutines**
 - ☕ **Retrofit**
 - ☕ **Room**
@@ -11,5 +13,8 @@
 - ☕ **Firebase**
 - ☕ **Geo Coder**
 - ☕ **Navigation**
+  
+</h3>
+
 
 
