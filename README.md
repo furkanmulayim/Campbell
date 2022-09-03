@@ -6,13 +6,13 @@
 
 <h3 align="center"> 
   
- **Coroutines**
- **Retrofit**
- **Room**
- **rxjava2**
- **Firebase**
- **Geo Coder**
- **Navigation**
+ **Coroutines** <br/>
+ **Retrofit**<br/>
+ **Room**<br/>
+ **rxjava2**<br/>
+ **Firebase**<br/>
+ **Geo Coder**<br/>
+ **Navigation**<br/>
   
 </h3>
 
