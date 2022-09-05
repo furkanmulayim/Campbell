@@ -6,15 +6,23 @@
 
 <h3 align="center"> 
   
- **Coroutines** <br/>
- **Retrofit**<br/>
- **Room**<br/>
- **rxjava2**<br/>
- **Firebase**<br/>
- **Geo Coder**<br/>
- **Navigation**<br/>
+ **Coroutines  ** 
+ **Retrofit  **
+ **Room  ** 
+ **rxjava2  ** 
+ **Firebase  ** 
+ **Geo Coder  ** 
+ **Navigation  **
   
 </h3>
+
+<p align="center">
+<img src="/previews/project_map.png"/>
+</p>
+
+<p align="center">
+<img src="/previews/project_gif.gif"/>
+</p>
 
 
 
