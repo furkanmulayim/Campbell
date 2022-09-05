@@ -6,13 +6,7 @@
 
 <h3 align="center"> 
   
- **Coroutines  ** 
- **Retrofit  **
- **Room  ** 
- **rxjava2  ** 
- **Firebase  ** 
- **Geo Coder  ** 
- **Navigation  **
+ **Coroutines -- Retrofit -- Room  -- rxjava2  -- Firebase  -- Geo Coder  -- Navigation**
   
 </h3>
 
