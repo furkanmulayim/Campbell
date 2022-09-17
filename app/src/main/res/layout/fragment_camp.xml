@@ -81,7 +81,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent">
 
-
                         <!--Image view üzerindeki harita butonu-->
                         <ImageView
                             android:id="@+id/goingToMap"
@@ -93,9 +92,31 @@
                             app:layout_constraintStart_toStartOf="@+id/constraintLayout11"
                             app:layout_constraintTop_toTopOf="@+id/constraintLayout11"
                             tools:ignore="SpeakableTextPresentCheck">
-
                         </ImageView>
 
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--Image view üzerindeki harita buton layoutu-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/goToGoogle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/switcherbuttongoldentransparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout11">
+
+                        <!--Image view üzerindeki harita butonu-->
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/ic_picture_free_icon_font"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="SpeakableTextPresentCheck"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -296,7 +317,7 @@
 
             <!--FOOTER İÇ ALAN-->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout6"
+                android:id="@+id/sayfaGecisAlani"
                 android:layout_width="140dp"
                 android:layout_height="45dp"
                 android:background="@drawable/koseyuvarlat"
@@ -311,9 +332,9 @@
                     android:layout_width="70dp"
                     android:layout_height="45dp"
                     android:background="@drawable/switcherbuttondarken"
-                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout6"
-                    app:layout_constraintStart_toStartOf="@id/constraintLayout6"
-                    app:layout_constraintTop_toTopOf="@+id/constraintLayout6">
+                    app:layout_constraintBottom_toBottomOf="@+id/sayfaGecisAlani"
+                    app:layout_constraintStart_toStartOf="@id/sayfaGecisAlani"
+                    app:layout_constraintTop_toTopOf="@+id/sayfaGecisAlani">
 
                     <!-- İTEM GÖRSEL -->
                     <ImageView

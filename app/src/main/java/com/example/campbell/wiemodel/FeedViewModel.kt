@@ -45,7 +45,6 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
             showCamps(camps)
         }
     }
-
     private fun getDataFromAPI() {
         disposable.add(
             campAPIService.getData()
@@ -55,23 +54,17 @@ class FeedViewModel(application: Application) : BaseViewModel(application) {
                     override fun onSuccess(t: List<Camp>) {
                         storeInSQLite(t)
                     }
-
                     override fun onError(e: Throwable) {
-
                     }
-
                 })
         )
     }
-
     fun refreshFromAPI() {
         getDataFromAPI()
     }
-
     private fun showCamps(campList: List<Camp>) {
         canliVeri.value = campList
     }
-
     private fun storeInSQLite(list: List<Camp>) {
         launch {
             val dao = CampDatabase(getApplication()).campDAo()

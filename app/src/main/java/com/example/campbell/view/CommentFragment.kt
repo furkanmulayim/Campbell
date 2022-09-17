@@ -91,6 +91,7 @@ class CommentFragment : Fragment() {
         if (control == false) {
             binding?.yorumIptal?.isClickable = true
             control = true
+            binding?.sayfaGecisAlani?.isVisible= false
             binding?.yorumPanel?.isVisible = true
             binding?.yorumEkle?.isVisible = false
             val anim = AnimationUtils.loadAnimation(requireContext(), R.anim.yorum_anim)
@@ -103,6 +104,7 @@ class CommentFragment : Fragment() {
     fun youmIptalTiklaninca() {
         binding?.yorumIptal?.isClickable = false
         control = false
+        binding?.sayfaGecisAlani?.isVisible= true
         binding?.yorumPanel?.isVisible = false
         binding?.yorumEkle?.isVisible = true
         val anim = AnimationUtils.loadAnimation(requireContext(), R.anim.yorum_anim_gidis)

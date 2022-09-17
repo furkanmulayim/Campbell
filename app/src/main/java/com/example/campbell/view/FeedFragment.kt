@@ -64,7 +64,7 @@ class FeedFragment : Fragment() {
         binding?.campList?.startAnimation(anim)
     }
 
-    fun observeLiveData() {
+    private fun observeLiveData() {
         viewModel.canliVeri.observe(viewLifecycleOwner, Observer { camp ->
             camp?.let {
                 binding?.campList?.visibility = View.VISIBLE

@@ -57,11 +57,9 @@ class CampFragment : Fragment() {
         binding?.goingToComment?.setOnClickListener {
             val go = CampFragmentDirections.actionCampFragmentToCommentFragment(campUuid)
             Navigation.findNavController(it).navigate(go)
-
-
         }
 
-        binding?.countryImage?.setOnClickListener {
+        binding?.goToGoogle?.setOnClickListener {
             val go = CampFragmentDirections.actionCampFragmentToPictureFragment(campUuid)
             Navigation.findNavController(it).navigate(go)
         }
