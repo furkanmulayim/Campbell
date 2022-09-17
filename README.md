@@ -11,12 +11,9 @@
 </h3>
 
 <p align="center">
-<img src="/previews/project_map.png"/>
+<img src="/previews/project_map.png "width="800">
 </p>
 
 <p align="center">
-<img src="/previews/project_gif.gif"/>
+<img src="/previews/project_gif.gif" height="800">
 </p>
-
-
-
