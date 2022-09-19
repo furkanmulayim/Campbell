@@ -63,7 +63,6 @@ class CampFragment : Fragment() {
             val go = CampFragmentDirections.actionCampFragmentToPictureFragment(campUuid)
             Navigation.findNavController(it).navigate(go)
         }
-
     }
 
     fun observeLiveData() {
@@ -80,4 +79,5 @@ class CampFragment : Fragment() {
             }
         }
     }
+
 }
