@@ -13,12 +13,13 @@
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/sheetnavgoldentransparent.xml" value="0.2125" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_camp.xml" value="0.2" />
-        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_comment.xml" value="0.152" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_comment.xml" value="0.2" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_comment_modal_bottom_sheet.xml" value="0.16216216216216217" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_feed.xml" value="0.2" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/item_camp.xml" value="0.1605351170568562" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

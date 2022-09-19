@@ -38,8 +38,6 @@ class CommentFragment : Fragment() {
         arguments?.let {
             campUuid = CommentFragmentArgs.fromBundle(it).campListData
         }
-
-
     }
 
     override fun onCreateView(
@@ -74,10 +72,12 @@ class CommentFragment : Fragment() {
         }
 
         binding?.yorumEkle?.setOnClickListener {
+            binding?.footerCll?.isVisible = false
             yorumEkleTiklaninca()
         }
 
         binding?.yorumIptal?.setOnClickListener {
+            binding?.footerCll?.isVisible = true
             youmIptalTiklaninca()
         }
         binding?.yorumGonder?.setOnClickListener {
@@ -88,6 +88,10 @@ class CommentFragment : Fragment() {
 
 
     fun yorumEkleTiklaninca() {
+
+        binding?.yorumPanel?.setOnClickListener {
+            youmIptalTiklaninca()
+        }
         if (control == false) {
             binding?.yorumIptal?.isClickable = true
             control = true
@@ -104,6 +108,7 @@ class CommentFragment : Fragment() {
     fun youmIptalTiklaninca() {
         binding?.yorumIptal?.isClickable = false
         control = false
+        binding?.footerCll?.isVisible = true
         binding?.sayfaGecisAlani?.isVisible= true
         binding?.yorumPanel?.isVisible = false
         binding?.yorumEkle?.isVisible = true
@@ -113,15 +118,12 @@ class CommentFragment : Fragment() {
 
     fun yorumPaylas() {
 
-
         var countryName = campUuid?.campCountryName.toString()
         var nameSurname = binding?.textAdSoyad?.text.toString()
         var mailAdress = binding?.textMailAdres?.text.toString()
         var commentable = binding?.textComment?.text.toString()
         var tarih = Timestamp.now()
         var favori = ""
-
-
 
         if (nameSurname != "" && mailAdress != "" && commentable != "") {
 

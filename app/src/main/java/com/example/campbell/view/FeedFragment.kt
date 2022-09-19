@@ -24,15 +24,11 @@ class FeedFragment : Fragment() {
 
     private var binding: FragmentFeedBinding? = null
 
-    private var arandi = 0
-
     private lateinit var viewModel: FeedViewModel
     private val campAdapter = CampAdapter(arrayListOf())
     private var campUuid: Camp? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
     }
 
     override fun onCreateView(
@@ -40,7 +36,6 @@ class FeedFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFeedBinding.inflate(layoutInflater)
-
 
         binding?.pbFeed?.visibility = View.VISIBLE
         arguments?.let {
@@ -66,8 +61,6 @@ class FeedFragment : Fragment() {
 
         refresh()
         search()
-
-
     }
 
     private fun refresh() {
@@ -90,30 +83,27 @@ class FeedFragment : Fragment() {
 
     private fun search() {
 
-        binding?.searchButton?.setOnClickListener {
-            hideKeyboard()
-            arandi++
-
-            var arama: String = binding?.search?.text.toString()
-
-            viewModel.canliVeri.observe(viewLifecycleOwner, Observer { camp ->
-                camp?.let {
-                    binding?.campList?.visibility = View.VISIBLE
-
-                    var myList: List<Camp>
-                    myList = camp.map { it }
-
-                    myList.filter { it.campCountryName.toString().contains("$arama", true) }
-                        ?.let { it1 -> campAdapter.updateCampList(it1) }
-                    binding?.pbFeed?.visibility = View.GONE
-                }
-            })
-        }
-
         binding?.search?.addTextChangedListener {
             if (binding?.search?.text.toString().equals("")) {
                 observeLiveData()
-                hideKeyboard()
+            } else {
+                binding?.searchButton?.setOnClickListener {
+                    hideKeyboard()
+                }
+                var arama: String = binding?.search?.text.toString()
+
+                viewModel.canliVeri.observe(viewLifecycleOwner, Observer { camp ->
+                    camp?.let {
+                        binding?.campList?.visibility = View.VISIBLE
+
+                        var myList: List<Camp>
+                        myList = camp.map { it }
+
+                        myList.filter { it.campCountryName.toString().contains("$arama", true) }
+                            ?.let { it1 -> campAdapter.updateCampList(it1) }
+                        binding?.pbFeed?.visibility = View.GONE
+                    }
+                })
             }
         }
     }
