@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "872195669643",
-    "project_id": "campbell-4f868",
-    "storage_bucket": "campbell-4f868.appspot.com"
+    "project_number": "SECRETFİLE",
+    "project_id": "SECRETFİLE",
+    "storage_bucket": "SECRETFİLE"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:872195669643:android:d719a518a51887f50b1e8e",
+        "mobilesdk_app_id": "SECRETFİLE",
         "android_client_info": {
           "package_name": "com.example.campbell"
         }
       },
       "oauth_client": [
         {
-          "client_id": "872195669643-eionove5ll569i5ei768geg7ktdejpkq.apps.googleusercontent.com",
+          "client_id": "SECRETFİLE",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCZPOsV3k8n4fOKGDvq00ZHls_q76tIKI4"
+          "current_key": "SECRETFİLE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "872195669643-eionove5ll569i5ei768geg7ktdejpkq.apps.googleusercontent.com",
+              "client_id": "SECRETFİLE",
               "client_type": 3
             }
           ]
