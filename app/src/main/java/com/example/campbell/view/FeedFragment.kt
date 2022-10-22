@@ -1,12 +1,14 @@
 package com.example.campbell.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
-import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -17,12 +19,22 @@ import com.example.campbell.databinding.FragmentFeedBinding
 import com.example.campbell.model.Camp
 import com.example.campbell.util.hideKeyboard
 import com.example.campbell.wiemodel.FeedViewModel
-import java.util.*
-import kotlin.collections.ArrayList
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
+
 
 class FeedFragment : Fragment() {
 
+
+    private lateinit var mAuth: FirebaseAuth
     private var binding: FragmentFeedBinding? = null
+    lateinit var mGoogleSignInClient: GoogleSignInClient
+
+    private val auth by lazy {
+        FirebaseAuth.getInstance()
+    }
 
     private lateinit var viewModel: FeedViewModel
     private val campAdapter = CampAdapter(arrayListOf())
@@ -36,15 +48,15 @@ class FeedFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFeedBinding.inflate(layoutInflater)
-
+        mAuth = FirebaseAuth.getInstance()
         binding?.pbFeed?.visibility = View.VISIBLE
         arguments?.let {
             campUuid = CampFragmentArgs.fromBundle(it).campListData
         }
 
+
         viewModel = ViewModelProviders.of(this).get(FeedViewModel::class.java)
         viewModel.refreshData()
-
         observeLiveData()
 
         binding?.campList?.layoutManager = LinearLayoutManager(context)
@@ -56,13 +68,61 @@ class FeedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        /** Geçiş anmasyonlarının deklare edilmesi */
         val anim = AnimationUtils.loadAnimation(context, R.anim.items_anim)
         binding?.campList?.startAnimation(anim)
 
+        /** oluşturulan fonksiyonlların görünüm olusturulduktan sonra kullanılması*/
         refresh()
         search()
+        girisCikisIslemler()
     }
 
+    /** Giriş Yapılmış mı kontrol ediyor*/
+    private fun isSignedIn(): Boolean {
+        return GoogleSignIn.getLastSignedInAccount(requireContext()) != null
+    }
+
+    /**  Feed Fragment İçin İsim Göstermek*/
+    private fun userInf() {
+        if (isSignedIn()) {
+            val currentUser = mAuth.currentUser
+            binding?.currentUserName?.text = currentUser?.displayName
+            binding?.currentLoginLogout?.isVisible = false
+        }
+
+    }
+
+    /** Giriş yapıldığı zaman on resume isle devam edeceğinden bu fonksiyonda çalıştırmak daha mantıklı*/
+    override fun onResume() {
+        super.onResume()
+        userInf()
+    }
+
+    /** Çıkış ve giriş Yapmak için*/
+    private fun girisCikisIslemler() {
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+        mGoogleSignInClient = GoogleSignIn.getClient(requireContext(), gso)
+
+        binding?.currentLoginLogout?.setOnClickListener {
+            val intent = Intent(requireContext(), SignInActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding?.currentUserName?.setOnClickListener {
+            mGoogleSignInClient.signOut().addOnCompleteListener {
+                Toast.makeText(requireContext(), "Çıkış Yapıldı", Toast.LENGTH_SHORT).show()
+                binding?.currentUserName?.text = ""
+                binding?.currentLoginLogout?.isVisible = true
+
+            }
+        }
+    }
+
+    /** Yenilemek için kullanılan fonksiyon*/
     private fun refresh() {
         binding?.swipeRefreshLayout?.setOnRefreshListener {
             binding?.campList?.visibility = View.GONE
@@ -71,6 +131,7 @@ class FeedFragment : Fragment() {
         }
     }
 
+    /** Datalarımızı canlı ve gözlemlenebilri olması için böyle bir fonksiyon kullandık */
     private fun observeLiveData() {
         viewModel.canliVeri.observe(viewLifecycleOwner, Observer { camp ->
             camp?.let {
@@ -81,6 +142,7 @@ class FeedFragment : Fragment() {
         })
     }
 
+    /** Kamp yerleri içerisinde aarama yapmak için kullanılan fonksiyon*/
     private fun search() {
 
         binding?.search?.addTextChangedListener {

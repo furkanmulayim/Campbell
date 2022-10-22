@@ -38,6 +38,7 @@ class CampFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         val anim  = AnimationUtils.loadAnimation(requireContext(),R.anim.detay0)
         binding?.scrrollview?.startAnimation(anim)
 

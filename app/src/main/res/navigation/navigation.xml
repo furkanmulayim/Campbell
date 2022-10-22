@@ -18,6 +18,9 @@
             app:nullable="true"
             android:defaultValue="@null"
             app:argType="com.example.campbell.model.Camp[]" />
+        <action
+            android:id="@+id/action_feedFragment_to_signInActivity"
+            app:destination="@id/signInActivity" />
     </fragment>
     <fragment
         android:id="@+id/campFragment"
@@ -84,4 +87,8 @@
             android:defaultValue="@null"
             app:argType="com.example.campbell.model.Camp" />
     </fragment>
+    <activity
+        android:id="@+id/signInActivity"
+        android:name="com.example.campbell.view.SignInActivity"
+        android:label="SignInActivity" />
 </navigation>

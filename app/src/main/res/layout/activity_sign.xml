@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.SignInActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layoutSign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/barlar"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="375dp"
+            android:layout_height="375dp"
+            android:layout_gravity="center"
+            android:background="@drawable/logo_foreground" />
+
+
+
+        <Button
+            android:id="@+id/googleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/googleg_standard_color_18"
+            android:text="Google Sign In"
+            android:textAllCaps="false"
+            android:textColor="@color/ortaMavi" />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/girissizDevam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giriş Yapmadan Devam Et >"
+        android:textSize="20sp"
+        android:textColor="@color/maviTrans"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
