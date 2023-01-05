@@ -7,4 +7,10 @@
     <string name="hesapSorguVar">Kayıtlı Bir Hesabın Var Mı?</string>
     <string name="kayitOl">Kayıt Ol</string>
     <string name="giris">Giris Yap</string>
+
+
+    <string name="admob_app_id">ca-app-pub-6851240179905709~3041472052</string>
+    <string name="admob_banner_id">ca-app-pub-6851240179905709/5552085328</string>
+
+
 </resources>

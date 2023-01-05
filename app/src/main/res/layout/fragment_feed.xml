@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
@@ -34,7 +40,7 @@
                         android:id="@+id/currentUserName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10sp"
+                        android:layout_marginStart="18sp"
                         android:textColor="@color/ortaMavi"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -138,6 +144,19 @@
 
         </LinearLayout>
 
-
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--ads:adUnitId="ca-app-pub-6851240179905709~3041472052"-->
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="ca-app-pub-6851240179905709~3041472052"
+        />
+
+    </RelativeLayout>
 </layout>

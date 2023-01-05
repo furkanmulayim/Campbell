@@ -4,25 +4,35 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2555" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/floatbuttongolden.xml" value="0.2555" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_back_button.xml" value="0.2555" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_bookmark.xml" value="0.2555" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_camping.xml" value="0.2555" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_heart.xml" value="0.2555" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_heart_gray.xml" value="0.2555" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1975" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_lction.xml" value="0.2" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_list.xml" value="0.2555" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_pncl.xml" value="0.2555" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_search.xml" value="0.2555" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/ic_user.xml" value="0.2555" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/koseyuvarlat.xml" value="0.2555" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/koseyuvarlat_comment.xml" value="0.1975" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/search_back.xml" value="0.2555" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/search_text_back.xml" value="0.2555" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/sheetnavgoldentransparent.xml" value="0.2125" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/drawable/switcherbuttongolden.xml" value="0.2555" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/activity_main.xml" value="0.16052631578947368" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/activity_sign.xml" value="0.16216216216216217" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_camp.xml" value="0.2" />
-        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_comment.xml" value="0.2" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_comment.xml" value="0.152" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_comment_modal_bottom_sheet.xml" value="0.16216216216216217" />
-        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_feed.xml" value="0.2" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_feed.xml" value="0.152" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_maps.xml" value="0.16216216216216217" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/fragment_picture.xml" value="0.16216216216216217" />
         <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/item_camp.xml" value="0.1605351170568562" />
+        <entry key="..\:/Users/sago3/AndroidStudioProjects/Campbell/app/src/main/res/layout/item_comment.xml" value="0.264" />
       </map>
     </option>
   </component>
